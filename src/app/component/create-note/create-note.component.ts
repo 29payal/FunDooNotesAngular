@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-note.component.scss']
 })
 export class CreateNoteComponent implements OnInit {
-title: any;
-description: any;
+
 isShow= false;
 
 constructor(){
@@ -21,14 +20,8 @@ Show() {
 }
 Close() {
   this.isShow = false;
-  if ((this.title != null && this.title != "") || (this.description != null && this.description != "")) {
-    console.log(this.title, this.description)
-    let payload = {
-      "title": this.title,
-      "description": this.description
-      
+    
     }
     
   }
-}
-}
+

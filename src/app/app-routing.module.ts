@@ -6,7 +6,7 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import {ResetPasswordComponent} from './component/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
-import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
+
 
 // import { ForgotPasswordComponent } from './component/reset-password/reset-password.component';
 // import { ForgotEmailComponent } from './forgot-email/forgot-email.component';
@@ -23,7 +23,7 @@ const routes: Routes = [
   {path:'dashboard', component:DashboardComponent,
   children:[
 {path:'createNote', component:CreateNoteComponent},
-{path:'getAllNote', component:GetAllNotesComponent}
+
   ]}
 ];
 

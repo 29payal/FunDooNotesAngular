@@ -25,7 +25,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreateNoteComponent } from './component/create-note/create-note.component';
 import{ ResetPasswordComponent} from './component/reset-password/reset-password.component';
  import { CommonModule } from '@angular/common';
-import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.co
     DashboardComponent,
     CreateNoteComponent,
     ResetPasswordComponent,
-    GetAllNotesComponent,
+    
   ],
   imports: [
     BrowserModule,
