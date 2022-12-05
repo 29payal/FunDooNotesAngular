@@ -17,14 +17,16 @@ import {MatInputModule} from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatIconButton} from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import {MatButtonToggleModule} from '@angular/material/button-toggle'
 import { RegistrationComponent } from './component/registration/registration.component';
 import { LoginComponent } from './component/login/login.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { CreateNoteComponent } from './component/create-note/create-note.component';
 import{ ResetPasswordComponent} from './component/reset-password/reset-password.component';
- import { CommonModule } from '@angular/common';
+ import { MatTooltip, MatTooltipModule} from '@angular/material/tooltip';
+ import { FormsModule } from '@angular/forms';
+import { IconComponent } from './component/icon/icon.component';
 
 
 @NgModule({
@@ -37,13 +39,13 @@ import{ ResetPasswordComponent} from './component/reset-password/reset-password.
     DashboardComponent,
     CreateNoteComponent,
     ResetPasswordComponent,
+    IconComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CommonModule,
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
@@ -57,7 +59,9 @@ import{ ResetPasswordComponent} from './component/reset-password/reset-password.
      MatSlideToggleModule,
      MatIconModule,
      MatMenuModule,
-  
+     FormsModule,
+     MatTooltipModule,
+     MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

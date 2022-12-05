@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CreateNoteComponent implements OnInit {
 
 isShow= false;
+title:any;
+description:any
 
 constructor(){
 

@@ -1,0 +1,17 @@
+
+.icon-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin: 0px;
+}
+.icon button{
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.icon img {
+    width: 20px;
+    height: 20px;
+}

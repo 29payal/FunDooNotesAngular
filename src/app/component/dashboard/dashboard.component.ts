@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import{Router} from '@angular/router';
-import { UserService } from 'src/app/services/userservice/user.service';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,26 +6,14 @@ import { UserService } from 'src/app/services/userservice/user.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-constructor (private router: Router, private user: UserService){
-
-}
-ngOnInit(): void {
   
-}
-Logout()
-{
-  this.router.navigateByUrl("/login")
-  console.log("Logout Successfully..!")
-}
-trash(){
-  this.router.navigateByUrl("/home/trash")
-}
-archive(){
-  this.router.navigateByUrl("/home/archive")
-}
 
-searchNote(event:any){
+  fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+
+  constructor() {
   
-}
-
+  }
+ ngOnInit(): void {
+   
+ }
 }
