@@ -27,7 +27,10 @@ import{ ResetPasswordComponent} from './component/reset-password/reset-password.
  import { MatTooltip, MatTooltipModule} from '@angular/material/tooltip';
  import { FormsModule } from '@angular/forms';
 import { IconComponent } from './component/icon/icon.component';
-
+import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
+import { DisplayNotesComponent } from './component/display-notes/display-notes.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { EmptyNoteComponent } from './component/empty-note/empty-note.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { IconComponent } from './component/icon/icon.component';
     CreateNoteComponent,
     ResetPasswordComponent,
     IconComponent,
+    GetAllNotesComponent,
+    DisplayNotesComponent,
+    EmptyNoteComponent,
     
   ],
   imports: [
@@ -61,7 +67,8 @@ import { IconComponent } from './component/icon/icon.component';
      MatMenuModule,
      FormsModule,
      MatTooltipModule,
-     MatButtonToggleModule
+     MatButtonToggleModule,
+     MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,11 +5,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HttpService {
-baseUrl ='http://fundoonotes.incubation.bridgelabz.com/api';
+  baseUrl = 'http://fundoonotes.incubation.bridgelabz.com/api';
 
   constructor(private httpClient: HttpClient) { }
 
-  postService(url: string, requestData: any, token: boolean= false , httpOptions: any= {} ) {
-   return this.httpClient.post(this.baseUrl+url, requestData, token && httpOptions)
+  postService(url: string, requestData: any, token: boolean = false, httpOptions: any = {}) {
+    return this.httpClient.post(this.baseUrl + url, requestData, token && httpOptions)
+  }
+
+  getService(url: string, token: boolean = true, httpOptions: any = {}) {
+    return this.httpClient.get(this.baseUrl + url, token && httpOptions)
   }
 }

@@ -1,0 +1,16 @@
+<div class="display">
+
+    <div class="notes" *ngFor="let data of recieveNoteList">
+        <div class="title">
+            <p (click)="openDialog(data)">{{data.title}}</p>
+        </div>
+
+        <div class="description">
+            <p (click)="openDialog(data)">{{data.note}}</p>
+        </div>
+
+        <div class="icon">
+            <app-icon></app-icon>
+        </div>
+    </div>
+</div>

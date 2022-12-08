@@ -1,8 +1,8 @@
-<div class="example-container" >
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
     <mat-toolbar class="example-toolbar">
         <div> 
-            <button style="border:0px;" mat-icon-button>
-            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+            <button style="border:0px;" mat-icon-buttonb (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
             </button>
         </div>
 
@@ -51,9 +51,11 @@
     </mat-toolbar>
 
 
-    <mat-sidenav-container class="example-sidenav-container">
-        <!-- <mat-sidenav #snav[mode]="mobileQuery.matches? 'over':'side' "[fixedInViewport]="mobileQuery.matches" fixedTopGap="56"> -->
-              <mat-sidenav #sidenav opened="true">
+    <mat-sidenav-container class="example-sidenav-container" class="example-sidenav-container"
+    [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        
+              <mat-sidenav  #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+              [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
             <mat-nav-list>
                         <a mat-list-item><img class="note"
                             src="../../assets/lightbulb.svg">Notes</a>
@@ -75,8 +77,10 @@
     
 
         <mat-sidenav-content>
-            <app-create-note></app-create-note>
+
             <router-outlet></router-outlet>
+            <!-- <app-create-note></app-create-note>
+     -->
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>
