@@ -18,7 +18,7 @@ ngOnInit(): void {
 getAllNote(){
   this.note.getAllNotes().subscribe((response : any) => {
     console.log(response);
-    this.noteArray=response
+    this.noteArray=response.data.data
     console.log(this.noteArray);
   })
 }

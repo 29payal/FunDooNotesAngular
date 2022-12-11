@@ -25,7 +25,13 @@
     outline: none;
     font: normal 18px Google Sans,Roboto,Helvetica,Arial,sans-serif;
 }
+
 .takeNotes{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.user{
+    font-size: small;
     display: flex;
     flex-direction: column-reverse;
 }

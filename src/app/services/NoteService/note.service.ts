@@ -30,7 +30,7 @@ getAllNotes(){
       Authorization: this.token,
     })
   };
-  return this.httpService.getService("/note/getAllNote" ,true, header)
+  return this.httpService.getService("/notes/getNotesList" ,true, header)
 }
 
 }

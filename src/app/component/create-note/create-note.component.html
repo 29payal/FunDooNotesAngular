@@ -8,6 +8,7 @@
     <div class="takeNotes" fxLayout="row" *ngIf="!isShow || isShow" (click)="Show()">
         <div *ngIf="!isShow || isShow">
             <input matInput  [(ngModel)]="description" class="note-field" type="text" placeholder="Take a note..." >
+        
         </div>
 
         <div *ngIf="!isShow" class="Icons">

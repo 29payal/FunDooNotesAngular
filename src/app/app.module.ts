@@ -30,7 +30,9 @@ import { IconComponent } from './component/icon/icon.component';
 import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
 import { DisplayNotesComponent } from './component/display-notes/display-notes.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { EmptyNoteComponent } from './component/empty-note/empty-note.component';
+
+// import { UpdateNotesComponent } from './component/update-notes/update-notes.component';
+// import { TrashNotesComponent } from './component/trash-notes/trash-notes.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { EmptyNoteComponent } from './component/empty-note/empty-note.component'
     IconComponent,
     GetAllNotesComponent,
     DisplayNotesComponent,
-    EmptyNoteComponent,
+    // UpdateNotesComponent,
+    // TrashNotesComponent,
     
   ],
   imports: [

@@ -16,5 +16,15 @@
         <button mat-icon-button matTooltip="Archive"><img src="../../../assets/archive.svg"></button>
     </div>
     <div class="icon">
-        <button mat-icon-button matTooltip="More"><img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz.svg"></button>
+        <button mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
+            <img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz.svg"></button>
+            <mat-menu #menu="matMenu" class="notifications-dropdown">
+                <button mat-menu-item (click)="trash()">Delete Note</button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>Make a copy</button>
+                <button mat-menu-item>Show checkboxes</button>
+                <button mat-menu-item>Copy to Google Docs</button>
+            </mat-menu>
     </div>
+</div>

@@ -10,7 +10,8 @@ export class CreateNoteComponent implements OnInit {
 
 isShow= false;
 title:any;
-description:any
+description:any;
+user:any;
 
 constructor(private note: NoteService){
 
@@ -28,7 +29,8 @@ Close()
       console.log(this.title, this.description)
       let payload = {
         "title" : this.title,
-        "note" : this.description
+        "note" : this.description,
+        "user" : this.user
       }
       this.note.createNote(payload).subscribe((response: any) =>{
         console.log(response)
