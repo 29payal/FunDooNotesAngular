@@ -29,8 +29,8 @@ Close()
       console.log(this.title, this.description)
       let payload = {
         "title" : this.title,
-        "note" : this.description,
-        "user" : this.user
+        "description" : this.description,
+    
       }
       this.note.createNote(payload).subscribe((response: any) =>{
         console.log(response)
@@ -38,3 +38,6 @@ Close()
     }
   }
 }
+
+// Let payload ={"noteIdList":["I'd of note"]
+// IsDeleted:true}
