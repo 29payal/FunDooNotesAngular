@@ -8,8 +8,8 @@ import { NoteService } from 'src/app/services/NoteService/note.service';
 })
 export class IconComponent implements OnInit {
 
-// // @Input() noteCard:any;
-// @Input() noteArray=[]
+
+ @Input() noteArray=[]
 
   constructor(private note: NoteService){
 
@@ -20,13 +20,11 @@ ngOnInit(): void {
 }
 
     trash(){
-      // this.note.getAllTrashNotes().subscribe((response:any)=>{
-      //   console.log(response);
-      // //   this.noteCard=response.data.data
-      //   console.log(this.noteCard)
-
-      //    this.noteArray=response.data.data
-      // console.log(this.noteArray);
-
+      this.note.getAllNotes().subscribe((response:any)=>{
+        console.log(response);
+        this.noteArray=response.data.data
+        console.log(this.noteArray);
+ 
+      })
       };
     }

@@ -33,4 +33,14 @@ getAllNotes(){
   return this.httpService.getService("/notes/getNotesList" ,true, header)
 }
 
+trashAllNote(payload:any){
+  this.token= localStorage.getItem('token')
+  let header={
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: this.token,
+  })
+};
+return this.httpService.postService("/notes/trashNotes",payload,true, header)
+}
 }
