@@ -11,7 +11,7 @@ export class DisplayNotesComponent implements OnInit{
 @Input() recieveNoteList :any;
 title: any;
 description: any;
-
+note:any;
 constructor(){
 }
 

@@ -30,7 +30,6 @@ import { IconComponent } from './component/icon/icon.component';
 import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
 import { DisplayNotesComponent } from './component/display-notes/display-notes.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { YouComponent } from './component/you/you.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +44,7 @@ import { YouComponent } from './component/you/you.component';
     IconComponent,
     GetAllNotesComponent,
     DisplayNotesComponent,
-    YouComponent,
+    
   ],
   imports: [
     BrowserModule,

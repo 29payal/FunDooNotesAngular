@@ -7,12 +7,11 @@
 
         <div class="description">
             <p >{{data.description}}</p>
-            <p>{{data.user.firstName}}</p>
-            <p>{{data.user.lastName}}</p>
+    
         </div>
 
         <div class="icon">
-            <app-icon></app-icon>
+            <app-icon [noteCard]="data"></app-icon>
         </div>
     </div>
 </div>

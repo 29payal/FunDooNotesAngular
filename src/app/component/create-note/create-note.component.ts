@@ -30,7 +30,7 @@ Close()
       let payload = {
         "title" : this.title,
         "description" : this.description,
-    
+          
       }
       this.note.createNote(payload).subscribe((response: any) =>{
         console.log(response)
