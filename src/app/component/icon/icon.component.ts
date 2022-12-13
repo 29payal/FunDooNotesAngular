@@ -10,13 +10,16 @@ import { NoteService } from 'src/app/services/NoteService/note.service';
 export class IconComponent implements OnInit {
 
   @Input() noteCard: any;
-  isDeleted = false;
+  isDelete = false;
+  isArchive = false;
+
 
   constructor(private note: NoteService) {
   }
 
   ngOnInit(): void {
-
+this.isDelete= this.noteCard.isDeleted;
+this.isArchive= this.noteCard.isArchived;
   }
 
   trash() {
@@ -24,10 +27,21 @@ export class IconComponent implements OnInit {
       noteIdList: [this.noteCard.id],
       isDeleted: true,
     }
-
     console.log(payload);
     this.note.trashAllNote(payload).subscribe((response: any) => {
       console.log(response)
     });
   }
+  
+  archive(){
+    let payload={
+      noteIdList : [this.noteCard.id],
+    isArchived: true,
+    }
+    console.log(payload);
+    this.note.archiveNotes(payload).subscribe((response:any)=>{
+      console.log(response)
+    });
+  }
+
 }

@@ -9,8 +9,7 @@ import { NoteService } from 'src/app/services/NoteService/note.service';
 export class GetAllNotesComponent implements OnInit{
 
 noteArray=[]
-
- isDeleted=false;
+ 
 constructor(private note: NoteService){
 
 }
